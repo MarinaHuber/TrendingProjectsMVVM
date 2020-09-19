@@ -17,7 +17,7 @@ class APIService {
     private init() {}
     
     func getTrendingReposToday(completed: @escaping (Result<[Repository], APIServiceError>) -> Void) {
-        let endpoint = baseURL + "repositories?language=&since=daily"
+        let endpoint = baseURL + "repositories?since=daily"
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.responseError))
@@ -47,6 +47,48 @@ class APIService {
                 decoder.dateDecodingStrategy    = .iso8601
                 let repo                        = try decoder.decode([Repository].self, from: data)
                 completed(.success(repo))
+            } catch {
+                completed(.failure(.parseError(error)))
+            }
+        }
+        
+        task.resume()
+    }
+    
+    
+    func getTrendingRepoReadMe(author: String, repoName: String, completed: @escaping (Result<Readme, APIServiceError>) -> Void) {
+        
+        let url = "https://api.github.com/repos/"
+        let endpoint = url + "\(author)/" + "\(repoName)/" + "readme"
+        
+        guard let urlString = URL(string: endpoint) else {
+            completed(.failure(.responseError))
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: urlString) { data, response, error in
+            
+            if let _ = error {
+                completed(.failure(.responseError))
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completed(.failure(.responseError))
+                return
+            }
+            
+            guard let data = data else {
+                completed(.failure(.responseError))
+                return
+            }
+            
+            do {
+                let decoder                     = JSONDecoder()
+                decoder.keyDecodingStrategy     = .convertFromSnakeCase
+                decoder.dateDecodingStrategy    = .iso8601
+                let readme                        = try decoder.decode(Readme.self, from: data)
+                completed(.success(readme))
             } catch {
                 completed(.failure(.parseError(error)))
             }

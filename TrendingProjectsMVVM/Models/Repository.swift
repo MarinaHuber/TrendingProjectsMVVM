@@ -10,7 +10,7 @@ import Foundation
 
 struct Repository: Codable {
     let author: String
-    var name: String
+    var name: String?
     let avatar: String
     var language, languageColor: String?
     var description: String

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9CD4DCCA2515E6AA000CCB8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DCC92515E6AA000CCB8E /* AppDelegate.swift */; };
 		9CD4DCCC2515E6AA000CCB8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DCCB2515E6AA000CCB8E /* SceneDelegate.swift */; };
-		9CD4DCCE2515E6AA000CCB8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DCCD2515E6AA000CCB8E /* ViewController.swift */; };
+		9CD4DCCE2515E6AA000CCB8E /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DCCD2515E6AA000CCB8E /* RepoListViewController.swift */; };
 		9CD4DCD12515E6AA000CCB8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4DCCF2515E6AA000CCB8E /* Main.storyboard */; };
 		9CD4DCD32515E6AF000CCB8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4DCD22515E6AF000CCB8E /* Assets.xcassets */; };
 		9CD4DCD62515E6AF000CCB8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4DCD42515E6AF000CCB8E /* LaunchScreen.storyboard */; };
@@ -22,6 +22,8 @@
 		9CD4DD082515EF2E000CCB8E /* RepoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4DD072515EF2E000CCB8E /* RepoList.storyboard */; };
 		9CD4DD0A2515EF3F000CCB8E /* RepoDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4DD092515EF3F000CCB8E /* RepoDetail.storyboard */; };
 		9CD4DD0D2515FB73000CCB8E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DD0C2515FB73000CCB8E /* Log.swift */; };
+		9CD4DD0F251643C4000CCB8E /* Readme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DD0E251643C4000CCB8E /* Readme.swift */; };
+		9CD4DD1225167124000CCB8E /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DD1125167124000CCB8E /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +47,7 @@
 		9CD4DCC62515E6AA000CCB8E /* TrendingProjectsMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendingProjectsMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD4DCC92515E6AA000CCB8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD4DCCB2515E6AA000CCB8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9CD4DCCD2515E6AA000CCB8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CD4DCCD2515E6AA000CCB8E /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
 		9CD4DCD02515E6AA000CCB8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CD4DCD22515E6AF000CCB8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CD4DCD52515E6AF000CCB8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		9CD4DD072515EF2E000CCB8E /* RepoList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepoList.storyboard; sourceTree = "<group>"; };
 		9CD4DD092515EF3F000CCB8E /* RepoDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepoDetail.storyboard; sourceTree = "<group>"; };
 		9CD4DD0C2515FB73000CCB8E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		9CD4DD0E251643C4000CCB8E /* Readme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readme.swift; sourceTree = "<group>"; };
+		9CD4DD1125167124000CCB8E /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 		9CD4DCC82515E6AA000CCB8E /* TrendingProjectsMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				9CD4DD10251670CB000CCB8E /* Extensions */,
 				9CD4DD0B2515FB55000CCB8E /* Utilities */,
 				9CD4DD062515EEFE000CCB8E /* Storyboards */,
 				9CD4DCFC2515E6FA000CCB8E /* Views */,
@@ -121,7 +126,7 @@
 				9CD4DCF92515E6CA000CCB8E /* Services */,
 				9CD4DCC92515E6AA000CCB8E /* AppDelegate.swift */,
 				9CD4DCCB2515E6AA000CCB8E /* SceneDelegate.swift */,
-				9CD4DCCD2515E6AA000CCB8E /* ViewController.swift */,
+				9CD4DCCD2515E6AA000CCB8E /* RepoListViewController.swift */,
 				9CD4DCCF2515E6AA000CCB8E /* Main.storyboard */,
 				9CD4DCD22515E6AF000CCB8E /* Assets.xcassets */,
 				9CD4DCD42515E6AF000CCB8E /* LaunchScreen.storyboard */,
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				9CD4DD012515E927000CCB8E /* Repository.swift */,
+				9CD4DD0E251643C4000CCB8E /* Readme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +201,14 @@
 				9CD4DD0C2515FB73000CCB8E /* Log.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9CD4DD10251670CB000CCB8E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9CD4DD1125167124000CCB8E /* String+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,13 +344,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CD4DCCE2515E6AA000CCB8E /* ViewController.swift in Sources */,
+				9CD4DCCE2515E6AA000CCB8E /* RepoListViewController.swift in Sources */,
 				9CD4DD042515EAB3000CCB8E /* Cell.swift in Sources */,
 				9CD4DD002515E855000CCB8E /* APIService.swift in Sources */,
 				9CD4DCFE2515E822000CCB8E /* APIServiceError.swift in Sources */,
 				9CD4DCCA2515E6AA000CCB8E /* AppDelegate.swift in Sources */,
+				9CD4DD0F251643C4000CCB8E /* Readme.swift in Sources */,
 				9CD4DCCC2515E6AA000CCB8E /* SceneDelegate.swift in Sources */,
 				9CD4DD0D2515FB73000CCB8E /* Log.swift in Sources */,
+				9CD4DD1225167124000CCB8E /* String+Ext.swift in Sources */,
 				9CD4DD022515E927000CCB8E /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
