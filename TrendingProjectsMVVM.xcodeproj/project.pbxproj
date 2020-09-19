@@ -24,6 +24,8 @@
 		9CD4DD0D2515FB73000CCB8E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DD0C2515FB73000CCB8E /* Log.swift */; };
 		9CD4DD0F251643C4000CCB8E /* Readme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DD0E251643C4000CCB8E /* Readme.swift */; };
 		9CD4DD1225167124000CCB8E /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DD1125167124000CCB8E /* String+Ext.swift */; };
+		9CD4DD182516B29F000CCB8E /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DD172516B29F000CCB8E /* DataViewModel.swift */; };
+		9CD4DD1A2516B677000CCB8E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4DD192516B677000CCB8E /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		9CD4DD0C2515FB73000CCB8E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		9CD4DD0E251643C4000CCB8E /* Readme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readme.swift; sourceTree = "<group>"; };
 		9CD4DD1125167124000CCB8E /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		9CD4DD172516B29F000CCB8E /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		9CD4DD192516B677000CCB8E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 		9CD4DCFB2515E6F0000CCB8E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9CD4DD172516B29F000CCB8E /* DataViewModel.swift */,
+				9CD4DD192516B677000CCB8E /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -351,8 +357,10 @@
 				9CD4DCCA2515E6AA000CCB8E /* AppDelegate.swift in Sources */,
 				9CD4DD0F251643C4000CCB8E /* Readme.swift in Sources */,
 				9CD4DCCC2515E6AA000CCB8E /* SceneDelegate.swift in Sources */,
+				9CD4DD1A2516B677000CCB8E /* DetailViewModel.swift in Sources */,
 				9CD4DD0D2515FB73000CCB8E /* Log.swift in Sources */,
 				9CD4DD1225167124000CCB8E /* String+Ext.swift in Sources */,
+				9CD4DD182516B29F000CCB8E /* DataViewModel.swift in Sources */,
 				9CD4DD022515E927000CCB8E /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
