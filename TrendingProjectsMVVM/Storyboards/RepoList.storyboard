@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="h1w-dJ-KXm">
+            <objects>
+                <viewController id="x7z-bX-pcl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lUr-lw-42u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0Gg-bW-uRl">
+                                <rect key="frame" x="0.0" y="68" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="W6S-aJ-Ql9"/>
+                                    <constraint firstAttribute="width" constant="414" id="zuD-Wh-3eb"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BYY-aI-6Q7">
+                                <rect key="frame" x="0.0" y="112" width="414" height="784"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BYY-aI-6Q7" firstAttribute="trailing" secondItem="6lf-tT-tu7" secondAttribute="trailing" id="2Ks-1p-iZb"/>
+                            <constraint firstItem="BYY-aI-6Q7" firstAttribute="leading" secondItem="6lf-tT-tu7" secondAttribute="leading" id="4dF-k7-kuq"/>
+                            <constraint firstItem="0Gg-bW-uRl" firstAttribute="leading" secondItem="6lf-tT-tu7" secondAttribute="leading" id="DP6-GT-swK"/>
+                            <constraint firstAttribute="bottom" secondItem="BYY-aI-6Q7" secondAttribute="bottom" id="eir-j1-eK5"/>
+                            <constraint firstItem="0Gg-bW-uRl" firstAttribute="top" secondItem="6lf-tT-tu7" secondAttribute="top" constant="24" id="fIh-6P-B8b"/>
+                            <constraint firstItem="BYY-aI-6Q7" firstAttribute="top" secondItem="0Gg-bW-uRl" secondAttribute="bottom" id="o9e-sH-NTM"/>
+                            <constraint firstItem="0Gg-bW-uRl" firstAttribute="trailing" secondItem="6lf-tT-tu7" secondAttribute="trailing" id="wPy-rH-BC0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6lf-tT-tu7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajn-k5-Rms" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
