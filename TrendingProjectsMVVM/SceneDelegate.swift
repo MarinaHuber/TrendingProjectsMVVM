@@ -11,6 +11,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         var window: UIWindow?
+        var storyboard: UIStoryboard!
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -19,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window                      = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene         = windowScene
-       // window?.rootViewController  = RepoList()
+        storyboard = UIStoryboard(name: "RepoList", bundle: nil)
+        window?.rootViewController  = storyboard.instantiateViewController(withIdentifier: "RepoList")
         window?.makeKeyAndVisible()
         
         configureNavigationBar()
