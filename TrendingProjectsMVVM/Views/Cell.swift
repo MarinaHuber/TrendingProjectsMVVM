@@ -6,4 +6,12 @@
 //  Copyright © 2020 Marina Huber. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Cell: UITableViewCell {
+
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var lblStars: UILabel!
+    
+}

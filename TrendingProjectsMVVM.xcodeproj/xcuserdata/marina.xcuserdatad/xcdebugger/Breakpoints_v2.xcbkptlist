@@ -20,5 +20,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8877F7AC-B88B-4B9E-8B76-3CB59979ECBE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrendingProjectsMVVM/ViewModels/DataViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8877F7AC-B88B-4B9E-8B76-3CB59979ECBE - 75b110ebe902bbc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrendingProjectsMVVM.DataViewModel.getData() -&gt; ()"
+                  moduleName = "TrendingProjectsMVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marina/Desktop/Projects/TrendingProjectsMVVM/TrendingProjectsMVVM/ViewModels/DataViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "149">
+               </Location>
+               <Location
+                  uuid = "8877F7AC-B88B-4B9E-8B76-3CB59979ECBE - fbce2ac039184ee7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;TrendingProjectsMVVM.Repository&gt;, TrendingProjectsMVVM.APIServiceError&gt;) -&gt; () in TrendingProjectsMVVM.DataViewModel.getData() -&gt; ()"
+                  moduleName = "TrendingProjectsMVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marina/Desktop/Projects/TrendingProjectsMVVM/TrendingProjectsMVVM/ViewModels/DataViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "166">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ACE43A4A-4E06-4539-8A85-C8D158630713"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrendingProjectsMVVM/Views/RepoListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "initViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
