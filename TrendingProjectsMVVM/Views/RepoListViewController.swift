@@ -11,7 +11,6 @@ import UIKit
 class RepoListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var dataViewModel = DataViewModel()
     var repos: [Repository]   = []
@@ -21,6 +20,10 @@ class RepoListViewController: UIViewController {
         initViewModel()
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadTableUIAnimate()
+    }
         
         func initViewModel(){
             dataViewModel.reloadTableView = {
@@ -29,18 +32,30 @@ class RepoListViewController: UIViewController {
             dataViewModel.showError = {
                 DispatchQueue.main.async { self.showAlert("Ups, something went wrong.") }
             }
-            dataViewModel.showLoading = {
-           //     DispatchQueue.main.async { self.activityIndicator.startAnimating() }
-            }
-            dataViewModel.hideLoading = {
-           //     DispatchQueue.main.async { self.activityIndicator.stopAnimating() }
-            }
             dataViewModel.getData()
             tableView.rowHeight = UITableView.automaticDimension
         }
+    
+    private func reloadTableUIAnimate() {
+        DispatchQueue.main.async(execute: { () -> Void in
+            self.tableView.reloadData()
+            let visibleInexPaths = self.tableView.indexPathsForVisibleRows
+            
+            _ = visibleInexPaths.map {
+                
+                $0.map {
+                    let cell = self.tableView.cellForRow(at: $0)
+                    cell?.animateStart(0.9, delay: Double($0.row) * 0.02, completion: {
+                        completed in
+                    })
+                }
+            }
+        })
+    }
+    
     }
 
-    extension RepoListViewController: UITableViewDataSource {
+extension RepoListViewController: UITableViewDataSource {
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return dataViewModel.numberOfCells

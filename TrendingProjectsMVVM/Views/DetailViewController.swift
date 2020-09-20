@@ -10,11 +10,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet var starsSegmented: UISegmentedControl!
+    @IBOutlet var authorLabel: UILabel!
     @IBOutlet var avatarImage: UIImageView!
     @IBOutlet var readmeLabel: UILabel!
-    
-    var author: String!
-    var repository: String!
+    @IBOutlet var repoDescription: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var model: Repository?
     
@@ -23,6 +24,10 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         title = model?.name
         getDataReadme(author: model?.author ?? "", repo: model?.name ?? "")
+        authorLabel.text = model?.author
+        repoDescription.text = model?.description
+        starsSegmented.setTitle("\(model?.stars ?? 0) Stars", forSegmentAt: 0)
+        starsSegmented.setTitle("\(model?.forks ?? 0) Forks", forSegmentAt: 1)
         configureUIElements()
     }
     
@@ -32,25 +37,30 @@ class DetailViewController: UIViewController {
     
     
     func downloadAvatarImage() {
+        activityIndicator.startAnimating()
         APIService.shared.downloadImage(from: model?.avatar ?? "") { [weak self] image in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.avatarImage.image = image
                 self.avatarImage.maskCircle(anyImage: image!)
+                self.activityIndicator.stopAnimating()
             }
         }
     }
     
     func getDetails() {
         APIService.shared.getTrendingReposToday { [weak self] result in
-            guard self != nil else { return }
+            guard let self  = self else { return }
             switch result {
-                case .success(let repo):
+                case .success(let repos):
                  DispatchQueue.main.async {
-                
+                    _ = repos.map {
+                        self.authorLabel.text = $0.author
+                        self.repoDescription.text = $0.description
+                    }
                 }
                 case .failure:
-                    self?.showAlert("No repository")
+                    self.showAlert("No repository")
             }
         }
     }

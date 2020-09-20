@@ -9,6 +9,7 @@
 import Foundation
 
 struct Repository: Codable {
+    
     let author: String?
     var name: String?
     let avatar: String?

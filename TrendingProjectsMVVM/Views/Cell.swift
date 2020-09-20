@@ -13,5 +13,4 @@ class Cell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var lblStars: UILabel!
-    
 }

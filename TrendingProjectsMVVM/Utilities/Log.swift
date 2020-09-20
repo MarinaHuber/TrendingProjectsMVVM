@@ -5,6 +5,7 @@
 import Foundation
 
 public class Log{
+    
     static let debug = true
     
     static func wtf(_ TAG: String?, _ MSG: Any){
