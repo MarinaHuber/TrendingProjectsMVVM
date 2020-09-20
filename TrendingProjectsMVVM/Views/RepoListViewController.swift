@@ -14,6 +14,7 @@ class RepoListViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var dataViewModel = DataViewModel()
+    var repos: [Repository]   = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class RepoListViewController: UIViewController {
            //     DispatchQueue.main.async { self.activityIndicator.stopAnimating() }
             }
             dataViewModel.getData()
+            tableView.rowHeight = UITableView.automaticDimension
         }
     }
 
@@ -45,12 +47,26 @@ class RepoListViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? Cell else {
+            guard let cell    = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? Cell else {
                 fatalError("Cell not exists in storyboard")
             }
-            let cellVM = dataViewModel.getCellViewModel( at: indexPath )
-            cell.lblName.text = cellVM.titleText
-           // cell.lblDescription.text = cellVM.subTitleText
+            let cellVM               = dataViewModel.getCellViewModel( at: indexPath )
+            cell.lblName.text        = cellVM.titleText
+            cell.lblDescription.text = cellVM.subTitleText
+            cell.lblStars.text       = "\(cellVM.starCount)"
+            
             return cell
         }
     }
+
+extension RepoListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedRepo = dataViewModel.didSelect(at: indexPath.row)
+        let storyboard = UIStoryboard(name: "RepoDetail", bundle: nil)
+        let detail: DetailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detail.model = selectedRepo
+        navigationController?.pushViewController(detail, animated: true)
+    }
+}
+

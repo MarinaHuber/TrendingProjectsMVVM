@@ -46,11 +46,15 @@ class DataViewModel {
         return cellViewModels[indexPath.row]
     }
     
+    func didSelect(at indexPath: Int) -> Repository {
+        return datas[indexPath]
+    }
+    
     func createCell(datas: [Repository]){
         self.datas = datas
         var vms = [DataListCellViewModel]()
         for data in datas {
-            vms.append(DataListCellViewModel(titleText: data.name ?? "", subTitleText: data.description, starCount: data.stars))
+            vms.append(DataListCellViewModel(titleText: data.name ?? "", subTitleText: data.description ?? "", starCount: data.stars ?? 0))
         }
         cellViewModels = vms
     }

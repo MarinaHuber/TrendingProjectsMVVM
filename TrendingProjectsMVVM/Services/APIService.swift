@@ -88,6 +88,7 @@ class APIService {
                 decoder.keyDecodingStrategy     = .convertFromSnakeCase
                 decoder.dateDecodingStrategy    = .iso8601
                 let readme                        = try decoder.decode(Readme.self, from: data)
+                
                 completed(.success(readme))
             } catch {
                 completed(.failure(.parseError(error)))
