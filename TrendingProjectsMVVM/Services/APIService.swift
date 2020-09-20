@@ -94,7 +94,6 @@ class APIService {
                 completed(.failure(.parseError(error)))
             }
         }
-        
         task.resume()
     }
     
