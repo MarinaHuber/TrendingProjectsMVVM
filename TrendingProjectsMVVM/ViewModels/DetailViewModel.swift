@@ -15,6 +15,7 @@ class DetailViewModel {
 struct DetailModelViewModel {
     let titleText: String
     let subTitleText: String
+    let profileImage: UIImage
     let starCount: Int
     let forkCount: Int
     let readme: String

@@ -13,6 +13,17 @@ class DetailViewController: UIViewController {
     var author: String!
     var repository: String!
     
+    init(author: String, repo: String) {
+        super.init(nibName: nil, bundle: nil)
+        self.author     = author
+        self.repository = repo
+        title           = repository
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

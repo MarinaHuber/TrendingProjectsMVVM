@@ -21,7 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window                      = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene         = windowScene
         storyboard = UIStoryboard(name: "RepoList", bundle: nil)
-        window?.rootViewController  = storyboard.instantiateViewController(withIdentifier: "RepoList")
+        let rootVC = storyboard.instantiateViewController(withIdentifier: "RepoList")
+        let navigationController = UINavigationController(rootViewController: rootVC)
+        window?.rootViewController  = navigationController
         window?.makeKeyAndVisible()
         
         configureNavigationBar()

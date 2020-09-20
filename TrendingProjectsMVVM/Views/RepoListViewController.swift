@@ -50,7 +50,7 @@ class RepoListViewController: UIViewController {
             }
             let cellVM = dataViewModel.getCellViewModel( at: indexPath )
             cell.lblName.text = cellVM.titleText
-            cell.lblDescription.text = cellVM.subTitleText
+           // cell.lblDescription.text = cellVM.subTitleText
             return cell
         }
     }
