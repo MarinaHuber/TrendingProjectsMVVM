@@ -1,5 +1,5 @@
 # TrendingProjectsMVVM
-MVVM + daily trending repositories demo
+MVVM + daily trending repositories
 
 Project does not use third party libraries
 
